@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CRUD - Categoria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <style>
+body{
+  padding: 20px;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  margin-left: 10px;
+}
+#div,
+#div2{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+</style>
+
+    <!-- FORM  -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <!-- Vertically centered modal -->
+   <div class="row">
+    <div class="col-md-12">
+
+     <form class="form-horizontal" id="form-edit-client">
+      <fieldset>
+
+        <!-- Formulario categoria -->
+        <legend>Categoria</legend>
+        <!-- inputs categoria-->
+        <br>
+        <div class="form-group">
+            <label for="categoria-id" class="col-md-4 control-label"></label>  
+            <div class="col-md-4">
+              <input id="categoria-id" name="categoria-id" type="text" placeholder="Generar ID" type="number" disabled class="form-control input-md">
+              <span class="help-block"> <small><i>Generar ID para la categoría</i></small></span>  
+            </div>
+          </div>
+          <br>
+        <div class="form-group">
+          <label for="categoria-name" class="col-md-4 control-label">Nombre</label>  
+          <div class="col-md-4">
+            <input id="categoria-name" name="categoria-name" type="text" placeholder="nombre de categoria" class="form-control input-md" maxlength="20">
+            <span  class="help-block"><small><i>Nombre de la categoria</i></small></span>  
+          </div>
+        </div>
+
+        <!-- descripcion-->
+        <div>
+          <label for="descripcion-categoria"  class="col-md-4 control-label">Descripción</label>
+          <div class="col-md-4">
+            <div  class="input-group">
+              <input id="descripcion-categoria" name="descripcion-categoria" type="text"  class="form-control input-md" maxlength="25">
+              <span  class="help-block"><small><i>Descripcion de la categoria</i></small></span>  
+            </div>
+          </div>
+        </div>
+
+        <!-- buscar categoria  -->
+        <div class="col-md-12">
+          <label for="buscar">Buscar:</label>
+          <input type="text" name="buscar_categoria"  placeholder="Escriba para filtrar..." id="buscar">
+        </div>
+
+        <!-- Button -->
+        <div class="form-group col-md-12">
+          <label for="btn-save" class="col-md-4 control-label"></label>
+          <div id="saveupdate">
+            <button id="btn-save" class="btn btn-success" onclick="addCategoria()">Guardar</button>
+          </div>
+        </div>
+      </div> 
+
+      </fieldset>
+    </form>
+  <!-- LIST -->
+  <div  class="col-md-12">
+    <div id="div"></div>
+    <div id="div2"></div>
+      <legend>Lista De Categorías</legend>
+      <table class="table table-bordered table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>ID</td>
+            <th>Name</td>
+            <th>Descripcion</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="form-list-category-body">
+        </tbody>
+      </table>
+  </div>
+  <br> 
+  <script type="text/javascript">
+</script>
+<script src="index.js""></script>
+</body>
+</html>
